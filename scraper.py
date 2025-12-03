@@ -202,7 +202,7 @@ class VintedScraper:
 
                 with sync_playwright() as p:
                     # Lanzar navegador
-                    browser: Browser = p.chromium.launch(headless=False)
+                    browser: Browser = p.chromium.launch(headless=True)
                     context = browser.new_context(
                         viewport={'width': 1920, 'height': 1080},
                         user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'

@@ -1,0 +1,85 @@
+╔════════════════════════════════════════════════════════════╗
+║        VINTED SCRAPER - GUIA RAPIDA DE USO                ║
+╚════════════════════════════════════════════════════════════╝
+
+✅ INSTALACION COMPLETADA EXITOSAMENTE!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 FORMAS DE USO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPCION 1: INTERFAZ WEB (RECOMENDADO) 🌐
+   1. Haz doble clic en: INICIAR_WEB.bat
+   2. Espera a que aparezca "Running on http://127.0.0.1:5000"
+   3. Abre tu navegador en: http://localhost:5000
+   4. Haz clic en "🔄 Actualizar Datos"
+   5. Ingresa cuantos productos quieres (ej: 100)
+   6. Espera y usa los filtros para explorar
+
+OPCION 2: SCRAPER DIRECTO 💻
+   1. Haz doble clic en: EJECUTAR_SCRAPER.bat
+   2. Espera a que termine
+   3. Los datos estaran en: data/productos.json y data/productos.csv
+
+OPCION 3: LINEA DE COMANDOS ⌨️
+   1. Abre CMD en esta carpeta
+   2. Ejecuta: venv\Scripts\activate
+   3. Ejecuta: python app.py   (para interfaz web)
+      O bien: python scraper.py (para scraper directo)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 ARCHIVOS IMPORTANTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+INICIAR_WEB.bat            → Inicia la interfaz web
+EJECUTAR_SCRAPER.bat       → Ejecuta el scraper directamente
+VERIFICAR_INSTALACION.bat  → Verifica que todo funcione
+
+scraper.py                 → Codigo del scraper
+app.py                     → Servidor web Flask
+data/productos.json        → Datos en formato JSON
+data/productos.csv         → Datos en formato CSV
+
+README.md                  → Documentacion completa
+TIPS.md                    → Tips y mejoras avanzadas
+example_usage.py           → Ejemplos de uso
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔧 SOLUCION DE PROBLEMAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Si el navegador no se abre:
+   - Verifica que instalaste Playwright correctamente
+   - Ejecuta: venv\Scripts\playwright.exe install chromium
+
+2. Si aparecen errores de Python:
+   - Verifica la instalacion: VERIFICAR_INSTALACION.bat
+
+3. Si el puerto 5000 esta ocupado:
+   - Cierra otras aplicaciones que usen el puerto
+   - O edita app.py y cambia el puerto en la ultima linea
+
+4. Si no se cargan productos:
+   - Verifica tu conexion a Internet
+   - Aumenta los delays en scraper.py
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️ IMPORTANTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Este scraper es solo para USO EDUCATIVO
+- No hagas scraping excesivo
+- Respeta los terminos de servicio de Vinted
+- La primera vez que ejecutes, el navegador se abrira visible
+  (puedes cambiarlo a headless=True en scraper.py linea 112)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📞 AYUDA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para mas informacion:
+- Lee README.md (documentacion completa)
+- Lee TIPS.md (tips avanzados)
+- Ejecuta: python example_usage.py (ejemplos interactivos)
+
+¡Disfruta del scraper! 🎉

@@ -1,0 +1,133 @@
+╔════════════════════════════════════════════════════════════╗
+║     VINTED SCRAPER - FILTRADO PARA VALENCIA, ESPAÑA       ║
+╚════════════════════════════════════════════════════════════╝
+
+✅ CONFIGURACION COMPLETADA!
+
+El scraper ahora busca SOLO ROPA cerca de Valencia, España
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 FORMAS DE USO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPCION 1: MENU INTERACTIVO (RECOMENDADO) 🎨
+   Haz doble clic en: SCRAPER_VALENCIA.bat
+
+   Veras un menu con opciones:
+   1. Ropa de mujer en Valencia
+   2. Ropa de hombre en Valencia
+   3. Zapatos de mujer en Valencia
+   4. Zapatos de hombre en Valencia
+   5. Ropa economica (max 20€)
+   6. Ropa en muy buen estado
+   7. Busqueda personalizada
+
+OPCION 2: INTERFAZ WEB 🌐
+   1. Haz doble clic en: INICIAR_WEB.bat
+   2. Abre: http://localhost:5000
+   3. Click en "Actualizar Datos"
+
+   NOTA: La interfaz web ahora usa automaticamente el filtro
+   de Valencia para ropa de mujer
+
+OPCION 3: PRUEBA RAPIDA 🧪
+   Haz doble clic en: PRUEBA_VALENCIA.bat
+   Extraera 5 productos de prueba filtrados por Valencia
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 FILTROS ACTIVOS POR DEFECTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Ubicacion: Valencia, España
+✓ Categoria: Ropa
+✓ Productos: Solo de vendedores cerca de Valencia
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔧 PERSONALIZAR BUSQUEDA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EJEMPLO 1: Buscar ropa de marca especifica
+   1. Ejecuta SCRAPER_VALENCIA.bat
+   2. Selecciona opcion 7 (Busqueda personalizada)
+   3. En "palabra clave" escribe: nike
+
+EJEMPLO 2: Ropa muy barata (max 10€)
+   1. Ejecuta SCRAPER_VALENCIA.bat
+   2. Selecciona opcion 7
+   3. En "precio maximo" escribe: 10
+
+EJEMPLO 3: Solo ropa nueva
+   1. Ejecuta SCRAPER_VALENCIA.bat
+   2. Selecciona opcion 7
+   3. En "estado" selecciona: Nuevo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 ARCHIVOS CREADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SCRAPER_VALENCIA.bat         → Menu interactivo para Valencia
+PRUEBA_VALENCIA.bat           → Prueba rapida (5 productos)
+GUIA_FILTROS_VALENCIA.md      → Documentacion completa de filtros
+
+config_filtros.py             → Configuracion de URLs y filtros
+scraper_valencia.py           → Script de scraping para Valencia
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎨 EJEMPLOS DE URLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Ropa de mujer en Valencia:
+https://www.vinted.es/catalog?catalog[]=1904&city_ids[]=21898
+
+Ropa economica (max 20€):
+https://www.vinted.es/catalog?city_ids[]=21898&price_to=20
+
+Buscar "vestido":
+https://www.vinted.es/catalog?catalog[]=1904&city_ids[]=21898&search_text=vestido
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💡 CAMBIAR DE CIUDAD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Si quieres buscar en otra ciudad:
+
+1. Abre: config_filtros.py
+2. Busca la seccion UBICACIONES
+3. Añade tu ciudad:
+
+   "alicante": {
+       "ciudad": "Alicante",
+       "ciudad_id": "XXXXX",  # Encuentra el ID en Vinted
+   }
+
+4. Usa la nueva ciudad en tus busquedas
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️ NOTAS IMPORTANTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Marca y Talla: No aparecen en el grid de Vinted
+  Solo estan disponibles en la pagina individual del producto
+
+- Ubicacion exacta: Vinted prioriza vendedores cercanos pero
+  puede mostrar algunos de otras ciudades cercanas
+
+- Primer scraping: El navegador se abrira visiblemente
+  (puedes cambiar a headless=True en scraper.py)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 MAS INFORMACION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Lee la documentacion completa:
+- GUIA_FILTROS_VALENCIA.md (filtros y personalizacion)
+- README.md (guia general)
+- TIPS.md (trucos avanzados)
+
+Ejecuta ejemplos:
+- python config_filtros.py (ver URLs disponibles)
+- python example_usage.py (ejemplos interactivos)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+¡Disfruta buscando ropa en Valencia! 🎉
